@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -12,7 +13,7 @@ module.exports = env => {
         context: sourcePath,
         entry: {
             app: path.resolve(sourcePath, 'entrypoint.js'),
-            // vendor: []
+            vendor: ['react', 'react-dom']
         },
         output: {
             path: buildPath,
@@ -22,11 +23,12 @@ module.exports = env => {
         module: {
             rules: [
                 {
-                    test: /\.(js)$/,
+                    test: /\.(js|jsx)$/,
                     exclude: /(node_modules|assets)/,
                     use: {
                         loader: 'babel-loader',
                         options: {
+                            presets: ["react"],
                             plugins: ['babel-plugin-transform-object-rest-spread']
                         }
                     }
@@ -63,17 +65,32 @@ module.exports = env => {
                 filename: 'assets/css/[name]-[chunkhash].css',
                 chunkFilename: '[id]-[chunkhash].css'
             }),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    NODE_ENV: JSON.stringify(NODE_ENV)
+                }
+            })
         ]
     };
 
     if (NODE_ENV === 'development') {
         config.devtool = 'eval-source-map';
+        config.devServer = {
+            contentBase: false,
+            host: '0.0.0.0',
+            historyApiFallback: true,
+            compress: true,
+            port: 3006
+        };
     }
 
     if (NODE_ENV === 'production') {
         config.devtool = false;
     }
     config.mode = NODE_ENV;
+    config.optimization = {
+        splitChunks: { chunks: 'all' }
+    };
 
     return config;
 };
