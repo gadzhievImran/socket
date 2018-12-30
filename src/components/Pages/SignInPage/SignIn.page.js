@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Cookies } from 'react-cookie';
 import '../../../assets/css/pages/signin.sass';
+import {PAGE_MAIN} from "../../../config/links";
 
 export default class SignInPage extends Component {
     constructor(props) {
@@ -26,6 +27,7 @@ export default class SignInPage extends Component {
         event.preventDefault();
         const { cookies } = this.props;
         cookies.set('token', '1234567890qwertyuiop');
+        this.props.history.push(PAGE_MAIN)
     };
 
     render() {

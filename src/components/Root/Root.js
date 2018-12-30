@@ -24,6 +24,7 @@ const Root = () => (
                                 component={MainPage}
                                 name={MAIN_PAGE}
                                 path={PAGE_MAIN}
+                                appTemplate
                             />
                             <AppRoute
                                 exact
