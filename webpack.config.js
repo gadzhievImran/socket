@@ -29,7 +29,7 @@ module.exports = env => {
                         loader: 'babel-loader',
                         options: {
                             presets: ['react', 'es2015', 'env'],
-                            plugins: ['babel-plugin-transform-object-rest-spread', 'transform-class-properties']
+                            plugins: ['babel-plugin-transform-object-rest-spread', 'transform-class-properties', 'syntax-dynamic-import']
                         }
                     }
                 },
@@ -59,7 +59,7 @@ module.exports = env => {
                         ? 'assets/index.html'
                         : 'assets/dev-index.html',
                 filename: 'index.html',
-                // favicon: 'assets/favicon.ico'
+                favicon: 'assets/favicon.ico'
             }),
             new MiniCssExtractPlugin({
                 filename: 'assets/css/[name]-[chunkhash].css',

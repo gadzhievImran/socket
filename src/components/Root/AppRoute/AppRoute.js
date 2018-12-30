@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 
 export default class AppRoute extends Component {
     componentDidMount() {
-        console.log(this.props)
+        console.log('this.props', this.props)
     }
 
     getTemplate = ({ component: ComposedComponent }) => {
-        let MainTemplate = (
+        const MainTemplate = (
+            <Suspense fallback={<div>Loading...</div>}>
                 <ComposedComponent {...this.props} key={`component${Date.now()}`}/>
+            </Suspense>
         );
         return MainTemplate
     };
