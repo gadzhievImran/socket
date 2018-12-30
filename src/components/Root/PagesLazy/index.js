@@ -13,6 +13,10 @@ export const MainPage = lazy(() => {
     return pageHandler(import (`../../Pages/MainPage`));
 });
 
+export const SignInPage = lazy(() => {
+    return pageHandler(import('../../Pages/SignInPage'))
+});
+
 export const NotFoundPage = lazy(() => {
     pageHandler(import('../../Pages/NotFoundPage'))
 });

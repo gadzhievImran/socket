@@ -2,7 +2,7 @@ import React, { Component, Suspense } from 'react';
 
 export default class AppRoute extends Component {
     componentDidMount() {
-        console.log('this.props', this.props)
+        console.log('AppRoute', this.props)
     }
 
     getTemplate = ({ component: ComposedComponent }) => {
@@ -13,6 +13,8 @@ export default class AppRoute extends Component {
         );
         return MainTemplate
     };
+
+
 
     render() {
         return this.getTemplate(this.props);
