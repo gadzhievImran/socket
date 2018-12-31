@@ -8,6 +8,10 @@ export default class AppRoute extends Component {
         this.redirect();
     }
 
+    // componentDidUpdate() {
+    //     this.redirect();
+    // }
+
     getTemplate = ({ component: ComposedComponent, appTemplate }) => {
         let MainTemplate = (
             <Suspense fallback={<div>Loading...</div>}>
@@ -41,13 +45,14 @@ export default class AppRoute extends Component {
     redirect = () => {
         const { cookies } = this.props;
         if(Boolean(cookies.get('token'))) {
-            return void this.props.history.push(PAGE_MAIN);
+            // return void this.props.history.push(PAGE_MAIN);
+        }else {
+            this.props.history.push(PAGE_SIGNIN);
         }
-
-        this.props.history.push(PAGE_SIGNIN);
     };
 
     render() {
+
         return this.getTemplate(this.props);
     }
 }

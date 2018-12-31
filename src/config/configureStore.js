@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import { apiMiddleware } from 'redux-api-middleware';
 
 import AppReducer from '../logic/reducers';
 import UserMiddleware from '../logic/middlewares/';
@@ -9,6 +10,7 @@ export default () => {
         AppReducer,
         applyMiddleware(
             ...UserMiddleware,
+            apiMiddleware,
             ...RootMiddleware
         )
     );

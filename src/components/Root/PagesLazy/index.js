@@ -18,5 +18,10 @@ export const SignInPage = lazy(() => {
 });
 
 export const NotFoundPage = lazy(() => {
-    pageHandler(import('../../Pages/NotFoundPage'))
+    return pageHandler(import('../../Pages/NotFoundPage'))
 });
+
+export const MessagesPage = lazy(() => {
+    return pageHandler(import('../../Pages/MessagesPage'))
+});
+

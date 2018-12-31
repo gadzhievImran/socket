@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-export default class Header extends Component {
+export default class MessagesPage extends Component {
     render() {
         return (
             <div>
-                <h1>Chat Project</h1>
+                MessagesPage
             </div>
         )
     }
