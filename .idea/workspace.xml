@@ -5,13 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Root/PagesLazy/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Root/PagesLazy/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Root/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Root/Root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Templates/AppTemplate/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Templates/AppTemplate/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/links.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/pageNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/pageNames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entrypoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/entrypoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/reducers/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,22 +34,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="7" />
+          <entry key="css" value="9" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="15" />
-          <entry key="js" value="116" />
+          <entry key="html" value="16" />
+          <entry key="js" value="135" />
           <entry key="json" value="7" />
-          <entry key="sass" value="4" />
+          <entry key="sass" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="7" />
-          <entry key="HTML" value="15" />
+          <entry key="CSS" value="9" />
+          <entry key="HTML" value="16" />
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="116" />
+          <entry key="JavaScript" value="135" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Sass" value="4" />
+          <entry key="Sass" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -59,9 +57,9 @@
           <entry key="css" value="19" />
           <entry key="gitignore" value="17" />
           <entry key="html" value="65" />
-          <entry key="js" value="11186" />
+          <entry key="js" value="13506" />
           <entry key="json" value="133" />
-          <entry key="sass" value="515" />
+          <entry key="sass" value="998" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -69,82 +67,48 @@
           <entry key="CSS" value="19" />
           <entry key="HTML" value="65" />
           <entry key="JSON" value="133" />
-          <entry key="JavaScript" value="11186" />
+          <entry key="JavaScript" value="13506" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Sass" value="515" />
+          <entry key="Sass" value="998" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43721828">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Root/Root.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Templates/AppTemplate/Header/Header.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/assets/dev-index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-                  <folding>
-                    <element signature="e#0#51#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>assets</find>
       <find>OptimizeCSSAssetsPlugin</find>
       <find>new OptimizeCSSAssetsPlugin({})</find>
+      <find>messageA</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,9 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assets/index.html" />
-        <option value="$PROJECT_DIR$/src/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/../front-admin-pp/postcss.config.js" />
         <option value="$PROJECT_DIR$/postcss.config.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/../front-admin-pp/webpack.config.js" />
@@ -165,10 +126,8 @@
         <option value="$PROJECT_DIR$/src/logic/middlewares/beforeApiMiddleware/index.js" />
         <option value="$PROJECT_DIR$/src/logic/actions/appActions.js" />
         <option value="$PROJECT_DIR$/src/logic/reducers/appReducer.js" />
-        <option value="$PROJECT_DIR$/src/logic/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/Root/index.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/MainPage/index.js" />
-        <option value="$PROJECT_DIR$/src/entrypoint.js" />
         <option value="$PROJECT_DIR$/src/components/Templates/ErrorBoundary/ErrorBoundary.js" />
         <option value="$PROJECT_DIR$/src/components/Templates/ErrorBoundary/index.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/MainPage/Main.page.js" />
@@ -178,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/components/Pages/NotFoundPage/NotFound.page.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/assets/css/pages/signin.sass" />
-        <option value="$PROJECT_DIR$/src/assets/css/style.sass" />
         <option value="$PROJECT_DIR$/src/components/Root/Bootstrap/index.js" />
         <option value="$PROJECT_DIR$/src/components/Root/Bootstrap/Bootstrap.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/SignInPage/index.js" />
@@ -193,13 +151,22 @@
         <option value="$PROJECT_DIR$/src/config/pageNames.js" />
         <option value="$PROJECT_DIR$/src/components/MessagesPage/Messages.page.js" />
         <option value="$PROJECT_DIR$/src/components/MessagesPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js" />
         <option value="$PROJECT_DIR$/src/components/Root/PagesLazy/index.js" />
         <option value="$PROJECT_DIR$/src/config/links.js" />
         <option value="$PROJECT_DIR$/src/components/Root/Root.js" />
         <option value="$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js" />
         <option value="$PROJECT_DIR$/src/components/Templates/AppTemplate/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/assets/dev-index.html" />
+        <option value="$PROJECT_DIR$/src/server.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/style.sass" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/pages/messages.sass" />
+        <option value="$PROJECT_DIR$/src/logic/reducers/messageReducer.js" />
+        <option value="$PROJECT_DIR$/src/logic/actions/messageActions.js" />
+        <option value="$PROJECT_DIR$/src/logic/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/entrypoint.js" />
+        <option value="$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js" />
+        <option value="$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js" />
       </list>
     </option>
   </component>
@@ -248,13 +215,22 @@
               <item name="is" type="b2602c69:ProjectViewProjectNode" />
               <item name="is" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="is" type="b2602c69:ProjectViewProjectNode" />
               <item name="is" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="is" type="b2602c69:ProjectViewProjectNode" />
+              <item name="is" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="MessagesPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="is" type="b2602c69:ProjectViewProjectNode" />
@@ -322,12 +298,12 @@
       <workItem from="1546104706352" duration="1345000" />
       <workItem from="1546135945175" duration="9956000" />
       <workItem from="1546172441034" duration="2134000" />
-      <workItem from="1546194247872" duration="16686000" />
+      <workItem from="1546194247872" duration="24067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43175000" />
+    <option name="totallyTimeSpent" value="50556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -359,25 +335,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor.3836fc64ae88215e3482.js" />
-    <entry file="file://$PROJECT_DIR$/public/app.dd204ea14ce5ccd7f581.js" />
-    <entry file="file://$PROJECT_DIR$/public/vendor.c4fa89bf753888efc8ff.js" />
-    <entry file="file://$PROJECT_DIR$/public/vendors~app~vendor.b18cddfa72bf3ec88c47.js" />
-    <entry file="file://$PROJECT_DIR$/public/app.1a9e54d75c780c1c7ad8.js" />
     <entry file="file://$PROJECT_DIR$/public/index.html" />
     <entry file="file://$PROJECT_DIR$/../front-admin-pp/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -414,24 +371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/reducers/appReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/actions/appActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -442,16 +385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entrypoint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,20 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/pages/signin.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/style.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Root/Bootstrap/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -538,16 +457,6 @@
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/SignInPage/SignIn.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,33 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Root/PagesLazy/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -688,13 +570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Root/Root.js">
+    <entry file="file://$PROJECT_DIR$/src/assets/dev-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -705,10 +584,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/dev-index.html">
+    <entry file="file://$PROJECT_DIR$/src/components/Root/AppRoute/AppRoute.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="448">
+          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/pages/signin.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Root/Root.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/SignInPage/SignIn.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/pages/messages.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/reducers/messageReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/actions/messageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/actions/appActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entrypoint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#357#390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/Messages.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/MessagesPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
