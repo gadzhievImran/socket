@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { PAGE_MAIN, PAGE_MESSAGES, PAGE_SIGNIN } from '../../../../config/links';
+import { PAGE_MAIN, PAGE_MESSAGES } from '../../../../config/links';
 
 import Li from './Li';
 
