@@ -58,6 +58,10 @@ export default class MessagesPage extends Component {
                                 value={message}
                             />
                         </div>
+                        <div className="wrapper-item">
+                            <button className="button" type="submit"> | > </button>
+                        </div>
+
                     </form>
                     <div className="messages">
                         <ul>
