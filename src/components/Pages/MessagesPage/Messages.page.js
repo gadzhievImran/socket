@@ -39,35 +39,38 @@ export default class MessagesPage extends Component {
     render() {
         const { message, items } = this.state;
         return (
-            <div id="page__messages">
-                <form
-                    onSubmit={event => {
-                    this.handleSubmit(event)
-                }}>
-                    <div className="wrapper-item">
-                        <input
-                            className="input__text"
-                            type="text"
-                            required
-                            autoFocus
-                            placeholder="Write message"
-                            onChange={event => {
-                                this.handleChange(event)
-                            }}
-                            value={message}
-                        />
+            <div className="page">
+                <div id="page__messages">
+                    <form
+                        onSubmit={event => {
+                            this.handleSubmit(event)
+                        }}>
+                        <div className="wrapper-item">
+                            <input
+                                className="input__text"
+                                type="text"
+                                required
+                                autoFocus
+                                placeholder="Write message"
+                                onChange={event => {
+                                    this.handleChange(event)
+                                }}
+                                value={message}
+                            />
+                        </div>
+                    </form>
+                    <div className="messages">
+                        <ul>
+                            {
+                                items.map((item, index) => {
+                                    return <li key={index}>{item}</li>
+                                })
+                            }
+                        </ul>
                     </div>
-                </form>
-                <div className="messages">
-                    <ul>
-                        {
-                            items.map((item, index) => {
-                                return <li key={index}>{item}</li>
-                            })
-                        }
-                    </ul>
                 </div>
             </div>
+
         )
     }
 }

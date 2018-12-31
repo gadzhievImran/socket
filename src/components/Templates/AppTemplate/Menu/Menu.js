@@ -7,7 +7,7 @@ import Li from './Li';
 export default class Menu extends Component {
     render() {
         return (
-            <div>
+            <div className="page__menu">
                 <Li
                     name="MainPage"
                     link={PAGE_MAIN}
