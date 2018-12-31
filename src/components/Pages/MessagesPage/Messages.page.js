@@ -15,6 +15,8 @@ export default class MessagesPage extends Component {
     };
 
     componentDidMount() {
+        this.props.messageAction('imraimra')
+        console.log(this.props.messageAction)
         this.setState(state => {
             const { items } = state;
             ws.onmessage = response => {
