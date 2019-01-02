@@ -15,24 +15,19 @@ export default class MessagesPage extends Component {
     };
 
     componentDidMount() {
-        this.props.messageAction('ewfsdc');
+        this.props.headerTitleChangeAction('IS');
+        // this.state.
+    }
 
-        // console.log(this.props.message)
-
-        // this.setState(state => {
-        //     const { items } = state;
-        //     ws.onmessage = response => {
-        //         items.push(response.data);
-        //     };
-        //     return { items };
-        // })
+    static getDerivedStateFromProps(props, state) {
+        return null;
     }
 
     handleSubmit = event => {
         const { message } = this.state;
         event.preventDefault();
         this.setState({ message: '' }, () => {
-            // ws.send(message);
+            ws.send(message);
         })
     };
 
@@ -41,7 +36,9 @@ export default class MessagesPage extends Component {
     };
 
     render() {
-        const { message, items } = this.state;
+        // const { message, items } = this.state;
+        const { messages } = this.props;
+        console.log(messages)
         return (
             <div className="page">
                 <div id="page__messages">
@@ -59,7 +56,7 @@ export default class MessagesPage extends Component {
                                 onChange={event => {
                                     this.handleChange(event)
                                 }}
-                                value={message}
+                                // value={message}
                             />
                         </div>
                         <div className="wrapper-item">
@@ -70,10 +67,15 @@ export default class MessagesPage extends Component {
                     <div className="messages">
                         <ul>
                             {
-                                items.map((item, index) => {
+                                messages.map((item, index) => {
                                     return <li key={index}>{item}</li>
                                 })
                             }
+                            {/*{*/}
+                                {/*message.map((item, index) => {*/}
+                                    {/*return <li key={index}>{item}</li>*/}
+                                {/*})*/}
+                            {/*}*/}
                         </ul>
                     </div>
                 </div>

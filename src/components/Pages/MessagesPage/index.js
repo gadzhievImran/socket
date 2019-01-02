@@ -6,9 +6,8 @@ import { messageAction } from '../../../logic/actions/messageActions';
 import { headerTitleChangeAction } from '../../../logic/actions/appActions';
 
 const mapStateToProps = state => {
-    console.log('state', state)
     return {
-        message: state.messageReducer.message,
+        messages: state.messageReducer.messages,
         title: state.appReducer.title
     }
 };
