@@ -4,10 +4,12 @@ import MessagesPage from './Messages.page';
 
 import { messageAction } from '../../../logic/actions/messageActions';
 import { headerTitleChangeAction } from '../../../logic/actions/appActions';
+import messageReducer from "../../../logic/reducers/messageReducer";
+import appReducer from "../../../logic/reducers/appReducer";
 
 const mapStateToProps = state => ({
-    message: state.message.message,
-    title: state.app.title
+    message: state.messageReducer.message,
+    title: state.appReducer.title
 });
 
 const mapDispatchToProps = dispatch => ({

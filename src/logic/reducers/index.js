@@ -4,8 +4,8 @@ import appReducer from './appReducer'
 import messageReducer from './messageReducer';
 
 const AppReducer = combineReducers({
-    app: appReducer,
-    message: messageReducer
+    appReducer,
+    messageReducer
 });
 
 export default AppReducer;

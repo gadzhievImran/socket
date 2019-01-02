@@ -1,11 +1,12 @@
 import { MESSAGE_ACTION } from '../../logic/actions/messageActions';
 
 let initialState = {
-    message: null
+    message: 'IMRAN_REDUCER'
 };
 
 export default (state = initialState, action) => {
     console.log('action', action)
+    console.log('initialState', state)
     let nextState;
 
     if(action.type === MESSAGE_ACTION) {

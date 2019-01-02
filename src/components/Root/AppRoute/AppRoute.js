@@ -14,11 +14,9 @@ export default class AppRoute extends Component {
 
     getTemplate = ({ component: ComposedComponent, appTemplate }) => {
         let MainTemplate = (
-            <React className="Fragment">
                 <Suspense fallback={<div>Loading...</div>}>
                     <ComposedComponent {...this.props} key={`component${Date.now()}`}/>
                 </Suspense>
-            </React>
 
         );
         if(appTemplate) {
@@ -42,8 +40,6 @@ export default class AppRoute extends Component {
 
         return MainTemplate
     };
-
-    appTemplateDeclared = () => this.props.appTemplate;
 
     redirect = () => {
         const { cookies } = this.props;
