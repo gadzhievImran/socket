@@ -15,7 +15,7 @@ export default class MessagesPage extends Component {
     };
 
     componentDidMount() {
-        this.props.messageAction('ewfsdc')
+        this.props.messageAction('ewfsdc');
 
         // console.log(this.props.message)
 

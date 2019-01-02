@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from 'react';
 
 import AppTemplate from '../../Templates/AppTemplate';
-import { PAGE_MAIN, PAGE_SIGNIN } from '../../../config/links';
+import { PAGE_SIGNIN } from '../../../config/links';
 
 export default class AppRoute extends Component {
     componentDidMount() {
