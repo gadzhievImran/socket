@@ -17,7 +17,6 @@ import './assets/css/style.sass';
 import Root from './components/Root';
 import configureStore from './config/configureStore';
 const store = configureStore();
-
 ReactDOM.render(
     <Provider store={store}>
         <Root />

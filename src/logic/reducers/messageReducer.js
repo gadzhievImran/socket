@@ -5,8 +5,7 @@ let initialState = {
 };
 
 export default (state = initialState, action) => {
-    console.log('action', action)
-    console.log('initialState', state)
+    console.log('Message-action', action);
     let nextState;
 
     if(action.type === MESSAGE_ACTION) {
