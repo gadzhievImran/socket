@@ -10,12 +10,20 @@ export default class MessagesPage extends Component {
 
         this.state = {
             message: '',
-            items: []
+            items: [],
+            heightPage: 0
         };
     };
 
     componentDidMount() {
         this.props.headerTitleChangeAction('IS');
+        // const ul = document.getElementById('ul');
+        const ul = document.querySelector('.messages');
+        const html_height = document.documentElement.clientHeight;
+        const page__header_height = document.querySelector('.page__header').clientHeight;
+        const page_height = document.querySelector('.page').clientHeight;
+        // const
+        ul.style.height = `${html_height - (page__header_height + page_height ) + 45}px`;
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -25,9 +33,10 @@ export default class MessagesPage extends Component {
     handleSubmit = event => {
         const { message } = this.state;
         event.preventDefault();
-        this.setState({ message: '' }, () => {
+        this.setState(state => {
             ws.send(message);
-        })
+            return { message: '' };
+        });
     };
 
     handleChange = event => {
@@ -63,7 +72,7 @@ export default class MessagesPage extends Component {
 
                     </form>
                     <div className="messages">
-                        <ul>
+                        <ul id="ul">
                             {
                                 messages.map((item, index) => {
                                     return <li key={index}>{item}</li>
