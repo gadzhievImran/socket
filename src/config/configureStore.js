@@ -16,6 +16,5 @@ export default () => {
             ...RootMiddleware
         )
     );
-
     return store;
 }

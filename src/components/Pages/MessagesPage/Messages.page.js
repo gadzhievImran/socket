@@ -15,21 +15,22 @@ export default class MessagesPage extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props.message)
-        this.setState(state => {
-            const { items } = state;
-            ws.onmessage = response => {
-                items.push(response.data);
-            };
-            return { items };
-        })
+        // console.log(this.props.message)
+
+        // this.setState(state => {
+        //     const { items } = state;
+        //     ws.onmessage = response => {
+        //         items.push(response.data);
+        //     };
+        //     return { items };
+        // })
     }
 
     handleSubmit = event => {
         const { message } = this.state;
         event.preventDefault();
         this.setState({ message: '' }, () => {
-            ws.send(message);
+            // ws.send(message);
         })
     };
 

@@ -16,8 +16,8 @@ const Root = () => (
     <React.Fragment>
         <ErrorBoundary>
             <CookiesProvider>
-                <Bootstrap>
-                    <BrowserRouter>
+                <BrowserRouter>
+                    <Bootstrap>
                         <Switch>
                             <AppRoute
                                 exact
@@ -44,8 +44,8 @@ const Root = () => (
                                 name={NOT_FOUND_PAGE}
                             />
                         </Switch>
-                    </BrowserRouter>
-                </Bootstrap>
+                    </Bootstrap>
+                </BrowserRouter>
             </CookiesProvider>
         </ErrorBoundary>
     </React.Fragment>

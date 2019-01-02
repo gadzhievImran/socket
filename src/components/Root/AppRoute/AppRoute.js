@@ -28,15 +28,6 @@ export default class AppRoute extends Component {
                 </AppTemplate>
             );
         }
-        // if(appTemplate) {
-        //     MainTemplate = (
-        //         <AppTemplate>
-        //             <Suspense fallback={<div>Loading...</div>}>
-        //                 <ComposedComponent {...this.props} key={`component${Date.now()}`}/>
-        //             </Suspense>
-        //         </AppTemplate>
-        //     )
-        // }
 
         return MainTemplate
     };
@@ -51,7 +42,6 @@ export default class AppRoute extends Component {
     };
 
     render() {
-
         return this.getTemplate(this.props);
     }
 }
