@@ -9,7 +9,6 @@ import configureStore from './config/configureStore';
 const store = configureStore();
 
 import { messageAction } from './logic/actions/messageActions';
-import { headerTitleChangeAction } from './logic/actions/appActions';
 
 const ws = new WebSocket('ws://185.43.5.35:8080');
 ws.onopen = () => {

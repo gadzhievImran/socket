@@ -16,7 +16,6 @@ export default class MessagesPage extends Component {
 
     componentDidMount() {
         this.props.headerTitleChangeAction('IS');
-        // this.state.
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -36,9 +35,8 @@ export default class MessagesPage extends Component {
     };
 
     render() {
-        // const { message, items } = this.state;
+        const { message } = this.state;
         const { messages } = this.props;
-        console.log(messages)
         return (
             <div className="page">
                 <div id="page__messages">
@@ -56,7 +54,7 @@ export default class MessagesPage extends Component {
                                 onChange={event => {
                                     this.handleChange(event)
                                 }}
-                                // value={message}
+                                value={message}
                             />
                         </div>
                         <div className="wrapper-item">
@@ -71,11 +69,6 @@ export default class MessagesPage extends Component {
                                     return <li key={index}>{item}</li>
                                 })
                             }
-                            {/*{*/}
-                                {/*message.map((item, index) => {*/}
-                                    {/*return <li key={index}>{item}</li>*/}
-                                {/*})*/}
-                            {/*}*/}
                         </ul>
                     </div>
                 </div>
