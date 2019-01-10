@@ -35,6 +35,8 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
     "mongodb": "^3.1.10",
     "react": "^16.7.0",
     "react-cookie": "^3.0.8",
