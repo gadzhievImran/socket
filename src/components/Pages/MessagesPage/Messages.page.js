@@ -6,6 +6,7 @@ import axios from 'axios';
 const ws = new WebSocket('ws://0.0.0.0:8080');
 
 import '../../../assets/css/pages/messages.sass';
+import '../../../assets/css/awesome.sass';
 
 export default class MessagesPage extends Component {
     constructor(props) {
@@ -81,18 +82,17 @@ export default class MessagesPage extends Component {
                         <div className="wrapper-item">
                             <button className="button" type="submit"> | > </button>
                         </div>
-
                     </form>
                     <div className="messages">
                         <ul id="ul">
                             {
                                 items ? items.map((item, index) => {
-                                    return <li key={index}>{item.message}</li>
+                                    return <li key={index}><span><i className="fas fa-trash-alt">{item.message}</i></span></li>
                                 }) : ''
                             }
                             {
                                 messages.map((item, index) => {
-                                    return <li key={index}>{item}</li>
+                                    return <li key={index} ><span><i className="fas fa-trash-alt">{item}</i></span></li>
                                 })
                             }
                         </ul>
