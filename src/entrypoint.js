@@ -12,7 +12,8 @@ const store = configureStore();
 import { messageAction } from './logic/actions/messageActions';
 import {PAGE_MAIN} from "./config/links";
 
-const ws = new WebSocket('ws://185.43.5.35:8080');
+// const ws = new WebSocket('ws://185.43.5.35:8080');
+const ws = new WebSocket('ws://0.0.0.0.:8080');
 
 ws.onopen = () => {
     console.log('ONLINE');
@@ -24,15 +25,6 @@ ws.onclose = () => {
 
 ws.onmessage = response => {
     store.dispatch(messageAction(response.data));
-    console.log('i here')
-
-    axios.post('http://localhost:3000/messages', {
-        message: response.data
-    }).then(response => {
-        console.log('response', response);
-    }).catch(error => {
-        console.error('Enter correct your password or name.', error);
-    });
     // here have to request for messages
 };
 

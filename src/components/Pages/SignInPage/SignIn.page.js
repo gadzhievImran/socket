@@ -46,7 +46,6 @@ export default class SignInPage extends Component {
             name,
             password
         }).then(response => {
-            console.log('response', response);
             this.setState({ token: response.data.payload.token }, () => {
                 cookies.set('token', this.state.token);
                 this.props.history.push(PAGE_MAIN)

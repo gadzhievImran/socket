@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-const ws = new WebSocket('ws://185.43.5.35:8080');
+// const ws = new WebSocket('ws://185.43.5.35:8080');
+
+const ws = new WebSocket('ws://0.0.0.0:8080');
 
 import '../../../assets/css/pages/messages.sass';
 
@@ -10,8 +13,8 @@ export default class MessagesPage extends Component {
 
         this.state = {
             message: '',
-            items: [],
-            heightPage: 0
+            heightPage: 0,
+            items: null
         };
     };
 
@@ -24,6 +27,9 @@ export default class MessagesPage extends Component {
         const page_height = document.querySelector('.page').clientHeight;
         // const
         ul.style.height = `${html_height - (page__header_height + page_height ) + 45}px`;
+        axios.get('http://localhost:3000/api/messages').then(response => {
+            this.setState({ items: response.data });
+        });
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -36,6 +42,12 @@ export default class MessagesPage extends Component {
         this.setState(state => {
             ws.send(message);
             return { message: '' };
+        }, () => {
+            axios.post('http://localhost:3000/messages', {
+                message: message
+            }).then(response => {
+                console.log('response', response.data);
+            }).catch(e => console.error(e));
         });
     };
 
@@ -44,7 +56,7 @@ export default class MessagesPage extends Component {
     };
 
     render() {
-        const { message } = this.state;
+        const { message, items } = this.state;
         const { messages } = this.props;
         return (
             <div className="page">
@@ -73,6 +85,11 @@ export default class MessagesPage extends Component {
                     </form>
                     <div className="messages">
                         <ul id="ul">
+                            {
+                                items ? items.map((item, index) => {
+                                    return <li key={index}>{item.message}</li>
+                                }) : ''
+                            }
                             {
                                 messages.map((item, index) => {
                                     return <li key={index}>{item}</li>
