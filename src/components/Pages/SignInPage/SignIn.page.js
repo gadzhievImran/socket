@@ -10,7 +10,8 @@ export default class SignInPage extends Component {
         super(props);
         this.state = {
             password: null,
-            name: null
+            name: null,
+            token: null
         };
     }
 
@@ -29,7 +30,7 @@ export default class SignInPage extends Component {
         event.preventDefault();
         const { cookies } = this.props;
         const { name, password } = this.state;
-        
+
         // fetch('/authentication', {
         //     method: 'post',
         //     headers: {'Content-Type':'application/json'},
