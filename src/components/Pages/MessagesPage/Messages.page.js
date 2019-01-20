@@ -56,6 +56,12 @@ export default class MessagesPage extends Component {
         this.setState({ message: event.target.value })
     };
 
+    handleClick = message => {
+        axios.delete('http://localhost:3000/remove', {
+            message: message
+        }).then(response => console.log(response.data));
+    };
+
     render() {
         const { message, items } = this.state;
         const { messages } = this.props;
@@ -87,12 +93,14 @@ export default class MessagesPage extends Component {
                         <ul id="ul">
                             {
                                 items ? items.map((item, index) => {
-                                    return <li key={index}><span><i className="fas fa-trash-alt">{item.message}</i></span></li>
+                                    return <li key={index}><span><i onClick={() => {
+                                        this.handleClick(item.message);
+                                    }} className="fas fa-trash-alt"></i>{item.message}</span></li>
                                 }) : ''
                             }
                             {
                                 messages.map((item, index) => {
-                                    return <li key={index} ><span><i className="fas fa-trash-alt">{item}</i></span></li>
+                                    return <li key={index} ><span><i onClick={this.handleClick} className="fas fa-trash-alt"></i>{item}</span></li>
                                 })
                             }
                         </ul>
