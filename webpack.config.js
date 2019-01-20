@@ -87,7 +87,9 @@ module.exports = env => {
     if (NODE_ENV === 'production') {
         config.devtool = false;
     }
+
     config.mode = NODE_ENV;
+
     config.optimization = {
         splitChunks: { chunks: 'all' }
     };

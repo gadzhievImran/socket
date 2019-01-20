@@ -29,6 +29,7 @@ export default class SignInPage extends Component {
         event.preventDefault();
         const { cookies } = this.props;
         const { name, password } = this.state;
+        
         // fetch('/authentication', {
         //     method: 'post',
         //     headers: {'Content-Type':'application/json'},
@@ -44,6 +45,7 @@ export default class SignInPage extends Component {
             name,
             password
         }).then(response => {
+            console.log('response', response);
             this.setState({ token: response.data.payload.token }, () => {
                 cookies.set('token', this.state.token);
                 this.props.history.push(PAGE_MAIN)
@@ -54,6 +56,7 @@ export default class SignInPage extends Component {
     };
 
     render() {
+        console.log('state', this.state);
         return (
             <div id="page__signin">
                 <h1>Sign in</h1>

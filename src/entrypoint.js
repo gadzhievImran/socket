@@ -11,6 +11,7 @@ const store = configureStore();
 import { messageAction } from './logic/actions/messageActions';
 
 const ws = new WebSocket('ws://185.43.5.35:8080');
+
 ws.onopen = () => {
     console.log('ONLINE');
 };

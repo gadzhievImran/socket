@@ -14,11 +14,11 @@ export default class AppRoute extends Component {
 
     getTemplate = ({ component: ComposedComponent, appTemplate }) => {
         let MainTemplate = (
-                <Suspense fallback={<div>Loading...</div>}>
-                    <ComposedComponent {...this.props} key={`component${Date.now()}`}/>
-                </Suspense>
-
+            <Suspense fallback={<div>Loading...</div>}>
+                <ComposedComponent {...this.props} key={`component${Date.now()}`}/>
+            </Suspense>
         );
+
         if(appTemplate) {
             MainTemplate = (
                 <AppTemplate {...this.props}>
