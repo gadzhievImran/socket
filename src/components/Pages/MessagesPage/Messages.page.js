@@ -11,7 +11,7 @@ import '../../../assets/css/awesome.sass';
 export default class MessagesPage extends Component {
     constructor(props) {
         super(props);
-
+        this.textInput = React.createRef();
         this.state = {
             message: '',
             heightPage: 0,
@@ -48,7 +48,6 @@ export default class MessagesPage extends Component {
                 message: message,
                 hasInput: false
             }).then(response => {
-                console.log('response', response.data);
             }).catch(e => console.error(e));
         });
     };
@@ -58,7 +57,6 @@ export default class MessagesPage extends Component {
     };
 
     handleClick = message => {
-        console.log('message', message)
         axios.delete('http://localhost:3000/remove', {
             data: { message }
         }).then(response => {
@@ -76,10 +74,8 @@ export default class MessagesPage extends Component {
     handleDoubleClick = index => {
         this.setState(state => {
             const { items } = state;
-            console.log('items', items);
             const finded = items.find((item, i) => index === i);
             finded.hasInput = !finded.hasInput;
-            console.log(finded);
             items.forEach((item, i) => {
                 if(item.message === finded.message) {
                     item.hasInput = finded.hasInput;
@@ -91,10 +87,40 @@ export default class MessagesPage extends Component {
         });
     };
 
+    handlechangeItem = (index, value) => {
+        this.setState(state => {
+            let items = [...state.items];
+            items.map((item, i) => {
+                if(index === i) {
+                    item.message = value;
+                }
+                return item;
+            });
+
+            return { items };
+        });
+
+
+        // this.textInput.current.value = finded.message
+    };
+
+    handleBlur = index => {
+        this.setState(state => {
+            const items = [...state.items];
+            items.map((item, i) => {
+                if(index === i) {
+                    console.log('item', item)
+                    item.hasInput = false;
+                }
+            });
+
+            return { items };
+        })
+    };
+
     render() {
         const { message, items } = this.state;
         const { messages } = this.props;
-        console.log(items)
         return (
             <div className="page">
                 <div id="page__messages">
@@ -144,7 +170,18 @@ export default class MessagesPage extends Component {
                                                 </i>
                                                 {
                                                     !item.hasInput ? item.message :
-                                                        <input type="text"/>
+                                                        <input
+                                                            value={item.message}
+                                                            // ref={this.textInput}
+                                                            className="input__message"
+                                                            autoFocus
+                                                            onChange={event => {
+                                                                this.handlechangeItem(index, event.target.value);
+                                                            }}
+                                                            onBlur={() => {
+                                                                this.handleBlur(index);
+                                                            }}
+                                                        />
                                                 }
                                             </span>
                                         </li>
