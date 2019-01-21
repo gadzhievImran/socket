@@ -15,7 +15,9 @@ export default class MessagesPage extends Component {
         this.state = {
             message: '',
             heightPage: 0,
-            items: null
+            items: null,
+            oldMessage: '',
+            isEdit: false
         };
     };
 
@@ -71,7 +73,45 @@ export default class MessagesPage extends Component {
         }).catch(e => console.log(e));
     };
 
-    handleDoubleClick = index => {
+    handleEdit = index => {
+        this.setState(state => {
+            let { items, oldMessage } = state;
+            oldMessage = items[index].message;
+            const finded = items.find((item, i) => index === i);
+            // finded.hasInput = !finded.hasInput;
+            finded.hasInput = true;
+            items.forEach((item, i) => {
+                if(item.message === finded.message) {
+                    item.hasInput = finded.hasInput;
+                }
+            });
+            return {
+                items, oldMessage
+            }
+        });
+    };
+
+    handlechangeItem = (index, value) => {
+        this.setState(state => {
+            let items = [...state.items];
+            const isEdit = state.isEdit;
+            let oldMessage = state.oldMessage;
+            if(!isEdit) {
+                oldMessage = state.items[index].message;
+            }
+            console.log('oldMessage', oldMessage);
+            items.map((item, i) => {
+                if(index === i) {
+                    item.message = value;
+                }
+                return item;
+            });
+
+            return { items, oldMessage, isEdit: true };
+        });
+    };
+
+    handleBlur = index => {
         this.setState(state => {
             const { items } = state;
             const finded = items.find((item, i) => index === i);
@@ -84,38 +124,14 @@ export default class MessagesPage extends Component {
             return {
                 items
             }
+        }, () => {
+            const { items, oldMessage } = this.state;
+            const finded = items.find((item, i) => index === i);
+            const { message } = finded;
+            axios.put('http://localhost:3000/update', {
+                data: { oldMessage, message }
+            }).then(response => console.log(response.data))
         });
-    };
-
-    handlechangeItem = (index, value) => {
-        this.setState(state => {
-            let items = [...state.items];
-            items.map((item, i) => {
-                if(index === i) {
-                    item.message = value;
-                }
-                return item;
-            });
-
-            return { items };
-        });
-
-
-        // this.textInput.current.value = finded.message
-    };
-
-    handleBlur = index => {
-        this.setState(state => {
-            const items = [...state.items];
-            items.map((item, i) => {
-                if(index === i) {
-                    console.log('item', item)
-                    item.hasInput = false;
-                }
-            });
-
-            return { items };
-        })
     };
 
     render() {
@@ -156,7 +172,7 @@ export default class MessagesPage extends Component {
                                             <span>
                                                 <i
                                                     onClick={() => {
-                                                        this.handleDoubleClick(index)
+                                                        this.handleEdit(index)
                                                     }}
                                                     className="far fa-edit"
                                                 >
@@ -196,7 +212,10 @@ export default class MessagesPage extends Component {
                                         >
                                             <span>
                                                 <i
-                                                    onClick={this.handleDoubleClick}
+                                                    onClick={this.handleEdit}
+                                                    // onBlur={() => {
+                                                    //     this.handleBlur(index);
+                                                    // }}
                                                     className="far fa-edit"
                                                 >
                                                 </i>
