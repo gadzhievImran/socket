@@ -45,7 +45,8 @@ export default class MessagesPage extends Component {
             return { message: '' };
         }, () => {
             axios.post('http://localhost:3000/messages', {
-                message: message
+                message: message,
+                hasInput: false
             }).then(response => {
                 console.log('response', response.data);
             }).catch(e => console.error(e));
@@ -61,7 +62,6 @@ export default class MessagesPage extends Component {
         axios.delete('http://localhost:3000/remove', {
             data: { message }
         }).then(response => {
-            console.log(response.data.value)
             const m = response.data.value;
             if(m) {
                 this.setState(state => {
@@ -71,6 +71,24 @@ export default class MessagesPage extends Component {
                 })
             }
         }).catch(e => console.log(e));
+    };
+
+    handleDoubleClick = index => {
+        this.setState(state => {
+            const { items } = state;
+            console.log('items', items);
+            const finded = items.find((item, i) => index === i);
+            finded.hasInput = !finded.hasInput;
+            console.log(finded);
+            items.forEach((item, i) => {
+                if(item.message === finded.message) {
+                    item.hasInput = finded.hasInput;
+                }
+            });
+            return {
+                items
+            }
+        });
     };
 
     render() {
@@ -112,12 +130,22 @@ export default class MessagesPage extends Component {
                                             <span>
                                                 <i
                                                     onClick={() => {
+                                                        this.handleDoubleClick(index)
+                                                    }}
+                                                    className="far fa-edit"
+                                                >
+                                                </i>
+                                                <i
+                                                    onClick={() => {
                                                         this.handleClick(item.message);
                                                     }}
                                                     className="fas fa-trash-alt"
                                                 >
-
-                                                </i>{item.message}
+                                                </i>
+                                                {
+                                                    !item.hasInput ? item.message :
+                                                        <input type="text"/>
+                                                }
                                             </span>
                                         </li>
                                     )
@@ -131,10 +159,14 @@ export default class MessagesPage extends Component {
                                         >
                                             <span>
                                                 <i
+                                                    onClick={this.handleDoubleClick}
+                                                    className="far fa-edit"
+                                                >
+                                                </i>
+                                                <i
                                                     onClick={this.handleClick}
                                                     className="fas fa-trash-alt"
                                                 >
-
                                                 </i>{item}
                                             </span>
                                         </li>
