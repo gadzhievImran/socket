@@ -57,14 +57,26 @@ export default class MessagesPage extends Component {
     };
 
     handleClick = message => {
+        console.log('message', message)
         axios.delete('http://localhost:3000/remove', {
-            message: message
-        }).then(response => console.log(response.data));
+            data: { message }
+        }).then(response => {
+            console.log(response.data.value)
+            const m = response.data.value;
+            if(m) {
+                this.setState(state => {
+                    let { items } = state;
+                    items = items.filter(item => item.message !== message);
+                    return { items };
+                })
+            }
+        }).catch(e => console.log(e));
     };
 
     render() {
         const { message, items } = this.state;
         const { messages } = this.props;
+        console.log(items)
         return (
             <div className="page">
                 <div id="page__messages">
@@ -93,14 +105,40 @@ export default class MessagesPage extends Component {
                         <ul id="ul">
                             {
                                 items ? items.map((item, index) => {
-                                    return <li key={index}><span><i onClick={() => {
-                                        this.handleClick(item.message);
-                                    }} className="fas fa-trash-alt"></i>{item.message}</span></li>
+                                    return (
+                                        <li
+                                            key={index}
+                                        >
+                                            <span>
+                                                <i
+                                                    onClick={() => {
+                                                        this.handleClick(item.message);
+                                                    }}
+                                                    className="fas fa-trash-alt"
+                                                >
+
+                                                </i>{item.message}
+                                            </span>
+                                        </li>
+                                    )
                                 }) : ''
                             }
                             {
                                 messages.map((item, index) => {
-                                    return <li key={index} ><span><i onClick={this.handleClick} className="fas fa-trash-alt"></i>{item}</span></li>
+                                    return (
+                                        <li
+                                            key={index}
+                                        >
+                                            <span>
+                                                <i
+                                                    onClick={this.handleClick}
+                                                    className="fas fa-trash-alt"
+                                                >
+
+                                                </i>{item}
+                                            </span>
+                                        </li>
+                                    )
                                 })
                             }
                         </ul>
