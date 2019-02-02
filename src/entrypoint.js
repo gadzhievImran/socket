@@ -9,7 +9,6 @@ import configureStore from './config/configureStore';
 const store = configureStore();
 
 import { messageAction } from './logic/actions/messageActions';
-import {PAGE_MAIN} from "./config/links";
 
 // const ws = new WebSocket('ws://185.43.5.35:8080');
 const ws = new WebSocket('ws://0.0.0.0.:8080');
@@ -33,4 +32,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
-

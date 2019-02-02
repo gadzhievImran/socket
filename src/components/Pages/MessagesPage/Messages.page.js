@@ -22,7 +22,7 @@ export default class MessagesPage extends Component {
     };
 
     componentDidMount() {
-        this.props.headerTitleChangeAction('IS');
+        this.props.headerTitleChangeAction('Imr');
         // const ul = document.getElementById('ul');
         const ul = document.querySelector('.messages');
         const html_height = document.documentElement.clientHeight;
@@ -58,7 +58,7 @@ export default class MessagesPage extends Component {
         this.setState({ message: event.target.value })
     };
 
-    handleClick = message => {
+    handleRemove = message => {
         axios.delete('http://localhost:3000/remove', {
             data: { message }
         }).then(response => {
@@ -92,23 +92,24 @@ export default class MessagesPage extends Component {
     };
 
     handlechangeItem = (index, value) => {
-        this.setState(state => {
-            let items = [...state.items];
-            const isEdit = state.isEdit;
-            let oldMessage = state.oldMessage;
-            if(!isEdit) {
-                oldMessage = state.items[index].message;
-            }
-            console.log('oldMessage', oldMessage);
-            items.map((item, i) => {
-                if(index === i) {
-                    item.message = value;
-                }
-                return item;
-            });
-
-            return { items, oldMessage, isEdit: true };
+      this.setState(state => {
+        let items = [...state.items];
+        const isEdit = state.isEdit;
+        let oldMessage = state.oldMessage;
+        if(!isEdit) {
+          oldMessage = state.items[index].message;
+        }
+        
+        console.log('oldMessage', oldMessage);
+        items.map((item, i) => {
+          if(index === i) {
+              item.message = value;
+          }
+          return item;
         });
+
+        return { items, oldMessage, isEdit: true };
+      });
     };
 
     handleBlur = index => {
@@ -137,6 +138,9 @@ export default class MessagesPage extends Component {
     render() {
         const { message, items } = this.state;
         const { messages } = this.props;
+        // console.log('state', this.state);
+        console.log('items', items);
+        console.log('messages', messages);
         return (
             <div className="page">
                 <div id="page__messages">
@@ -179,7 +183,7 @@ export default class MessagesPage extends Component {
                                                 </i>
                                                 <i
                                                     onClick={() => {
-                                                        this.handleClick(item.message);
+                                                        this.handleRemove(item.message);
                                                     }}
                                                     className="fas fa-trash-alt"
                                                 >
@@ -205,29 +209,29 @@ export default class MessagesPage extends Component {
                                 }) : ''
                             }
                             {
-                                messages.map((item, index) => {
-                                    return (
-                                        <li
-                                            key={index}
-                                        >
-                                            <span>
-                                                <i
-                                                    onClick={this.handleEdit}
-                                                    // onBlur={() => {
-                                                    //     this.handleBlur(index);
-                                                    // }}
-                                                    className="far fa-edit"
-                                                >
-                                                </i>
-                                                <i
-                                                    onClick={this.handleClick}
-                                                    className="fas fa-trash-alt"
-                                                >
-                                                </i>{item}
-                                            </span>
-                                        </li>
-                                    )
-                                })
+                              messages.map((item, index) => {
+                                return (
+                                  <li
+                                    key={index}
+                                  >
+                                    <span>
+                                      <i
+                                        onClick={this.handleEdit}
+                                        // onBlur={() => {
+                                        //     this.handleBlur(index);
+                                        // }}
+                                        className="far fa-edit"
+                                      >
+                                      </i>
+                                      <i
+                                        onClick={this.handleRemove}
+                                        className="fas fa-trash-alt"
+                                      >
+                                      </i>{item}
+                                    </span>
+                                  </li>
+                                )
+                              })
                             }
                         </ul>
                     </div>
