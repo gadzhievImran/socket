@@ -22,6 +22,7 @@ ws.onclose = () => {
 };
 
 ws.onmessage = response => {
+    console.log('store', store.getState())
     store.dispatch(messageAction(response.data));
     // here have to request for messages
 };

@@ -36,16 +36,11 @@ export default class MessagesPage extends Component {
         });
     }
 
-    static getDerivedStateFromProps(props, state) {
-        console.log('getDerivedStateFromProps', props.userInfo)
-        return null;
-    }
-
     handleSubmit = event => {
         const { message } = this.state;
         event.preventDefault();
         this.setState(state => {
-            ws.send(message);
+            ws.send(`${this.props.userInfo.name} | ${message}`);
             return { message: '' };
         }, () => {
             axios.post('http://localhost:3000/messages', {
@@ -209,7 +204,6 @@ export default class MessagesPage extends Component {
                             }
                             {
                               messages.map((item, index) => {
-                                  console.log('item', item)
                                 return (
                                   <li
                                     key={index}
@@ -228,8 +222,8 @@ export default class MessagesPage extends Component {
                                         className="fas fa-trash-alt"
                                       >
                                       </i>
-                                        <span className="span__name">{userInfo.name} </span>
-                                        | {item}  
+                                      <span className="span__name">{item.replace(/\|.+/, '')}</span> | 
+                                        {item.replace(/.+.\|/g, '')}  
                                     </span>
                                   </li>
                                 )

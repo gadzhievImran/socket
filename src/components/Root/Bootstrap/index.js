@@ -5,10 +5,6 @@ import { withRouter } from 'react-router-dom';
 import { userInfoAction } from '../../../logic/actions/userActions';
 import Bootstrap from './Bootstrap';
 
-const mapStateToProps = state => ({
-    userInfo: state.userReducer
-});
-
 const mapDispatchToProps = dispatch => ({
     userInfoAction: data => dispatch(userInfoAction(data))
 })
