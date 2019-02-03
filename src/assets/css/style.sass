@@ -62,11 +62,49 @@ body
         //height: 100%
         //width: 100%
 
+@media screen and (max-width: 720px) and (min-width: 500px)
+    body
+        .page
+            top: 112px
+            left: 0
+            width: 90% !important
+            #page__messages
+                .wrapper-item
+                    .button
+                        left: 450px
+                        top: 122px
+                .messages
+                    width: 445px
+        .page__menu
+            height: auto
+            width: 100%
+            div
+                display: inline-block
+
 @media screen and (max-width: 500px) 
     body
         .page
             top: 112px
             left: 0
+            width: 98% !important
+            #page__messages
+                form
+                    width: 90%
+                    margin: 0 auto
+                .wrapper-item
+                    .button
+                        display: none
+                .messages
+                    // overflow-x: hidden
+                    width: 95%
+                    margin: 0 auto
+                    ul
+                        width: 95%
+                        margin-left: 0
+                        padding-left: 0
+                        li
+                            list-style-type: none
+                            // width: 90%
         .page__menu
             height: auto
             width: 100%
