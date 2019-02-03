@@ -29,7 +29,8 @@ export default class MessagesPage extends Component {
         const page__header_height = document.querySelector('.page__header').clientHeight;
         const page_height = document.querySelector('.page').clientHeight;
         // const
-        ul.style.height = `${html_height - (page__header_height + page_height ) + 45}px`;
+        // ul.style.height = `${html_height - (page__header_height + page_height ) + 45}px`;
+        ul.style.height = `${html_height - (page__header_height + page_height )}px`;
         axios.get('http://localhost:3000/api/messages').then(response => {
             this.setState({ items: response.data });
         });
