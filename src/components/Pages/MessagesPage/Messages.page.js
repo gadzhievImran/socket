@@ -37,6 +37,7 @@ export default class MessagesPage extends Component {
     }
 
     static getDerivedStateFromProps(props, state) {
+        console.log('getDerivedStateFromProps', props.userInfo)
         return null;
     }
 
@@ -49,6 +50,7 @@ export default class MessagesPage extends Component {
         }, () => {
             axios.post('http://localhost:3000/messages', {
                 message: message,
+                name: this.props.userInfo.name,
                 hasInput: false
             }).then(response => {
             }).catch(e => console.error(e));
@@ -101,7 +103,6 @@ export default class MessagesPage extends Component {
           oldMessage = state.items[index].message;
         }
         
-        console.log('oldMessage', oldMessage);
         items.map((item, i) => {
           if(index === i) {
               item.message = value;
@@ -138,10 +139,7 @@ export default class MessagesPage extends Component {
 
     render() {
         const { message, items } = this.state;
-        const { messages } = this.props;
-        // console.log('state', this.state);
-        console.log('items', items);
-        console.log('messages', messages);
+        const { messages, userInfo } = this.props;
         return (
             <div className="page">
                 <div id="page__messages">
@@ -190,7 +188,7 @@ export default class MessagesPage extends Component {
                                                 >
                                                 </i>
                                                 {
-                                                    !item.hasInput ? item.message :
+                                                    !item.hasInput ? <span><span className="span__name">{item.name}</span> | {item.message}</span>  :
                                                         <input
                                                             value={item.message}
                                                             // ref={this.textInput}
@@ -211,6 +209,7 @@ export default class MessagesPage extends Component {
                             }
                             {
                               messages.map((item, index) => {
+                                  console.log('item', item)
                                 return (
                                   <li
                                     key={index}
@@ -228,7 +227,9 @@ export default class MessagesPage extends Component {
                                         onClick={this.handleRemove}
                                         className="fas fa-trash-alt"
                                       >
-                                      </i>{item}
+                                      </i>
+                                        <span className="span__name">{userInfo.name} </span>
+                                        | {item}  
                                     </span>
                                   </li>
                                 )

@@ -56,7 +56,6 @@ export default class SignInPage extends Component {
     };
 
     render() {
-        console.log('state', this.state);
         return (
             <div id="page__signin">
                 <h1>Sign in</h1>
