@@ -41,6 +41,7 @@ export default class MessagesPage extends Component {
         event.preventDefault();
         this.setState(state => {
             ws.send(`${this.props.userInfo.name} | ${message}`);
+            
             return { message: '' };
         }, () => {
             axios.post('http://localhost:3000/messages', {
